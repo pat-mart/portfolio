@@ -34,7 +34,7 @@ export default function Hero() {
                     </p>
                     <div className={"flex flex-row space-x-6"}>
                         <Link href={"/screens/projects"} prefetch><FancyButton text={"View my projects"}/></Link>
-                        <Link href={"www.linkedin.com/in/patrick-g-martin"} prefetch><NoIconButton text={"LinkedIn"}></NoIconButton></Link>
+                        <Link href={"https://www.linkedin.com/in/patrick-g-martin/"} target={"_blank"} prefetch><NoIconButton text={"LinkedIn"}></NoIconButton></Link>
                         <Link href={"https://github.com/pat-mart"} target={"_blank"} prefetch><NoIconButton text={"GitHub"}></NoIconButton></Link>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ const items = [
         title: "My works-in-progress",
         description: "I'm currently building a web platform with Next.JS for sharing cooking recipes. I'm thinking of calling it Bisque. " +
             "Do you know how most recipes online have very lengthy introductions and are hard to follow? " +
-            "My goal with the platform I'm working on now is to simplify online recipes (and hopefully gain a user base).",
+            "My goal with this project is to simplify online recipes (and hopefully gain a user base).",
         className: "md:col-span-3 col-span-2 row-span-3 bg-gray-900 flex w-full",
         link: ""
     }

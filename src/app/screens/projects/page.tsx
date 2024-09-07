@@ -25,14 +25,14 @@ const items = [
         title: "Tuneminal",
         description: "A chromatic tuner and metronome written in Go.\nUses PortAudio to manage input and output audio buffers, which are generated without the use of an external sound file. I started playing guitar recently, and I hope to use this as a practice aid.",
         className: "md:col-span-1 row-span-3 bg-gray-900",
-        link: "https://github.com/FRC3950/GymSauna"
+        link: "https://github.com/pat-mart/tune-minal"
     },
     {
         title: "Alpha for Astronomy",
         description: "A Flutter iOS app I developed for planning astronomy observations. I also developed an open-source Dart library (called alpha_lib) for astronomical calculations as a companion project. Uses alpha_lib and a Flask service hosted via AWS as a backend. " +
             "To manage the many user input states, I developed Alpha with the Model-View-ViewModel architecture.",
         className: "md:col-span-1 col-3 row-span-1 bg-gray-900",
-        link: "https://github.com/FRC3950/GymSauna"
+        link: "https://github.com/pat-mart/alpha_app"
     }
 ]
 
