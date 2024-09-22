@@ -9,10 +9,10 @@ export default function Grid({items}: {items: {
         link: string,
     }[]}) {
     return (
-        <BentoGrid className="max-w-full mx-auto md:auto-rows-[20rem]">
+        <BentoGrid className="max-w-full mx-auto md:auto-rows-[20rem] pb-6">
             {items.map((item, i) => (
                 <Link href={item.link} key={i} target="_blank" aria-disabled={item.link === ""}
-                      className={`flex ${item.link === "" ? "pointer-events-none" : ""}`}>
+                      className={`flex pb-4 ${item.link === "" ? "pointer-events-none" : ""}`}>
                     <BentoGridItem
                         key={i}
                         title={item.title}

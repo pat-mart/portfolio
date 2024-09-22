@@ -7,14 +7,14 @@ import Link from 'next/link'
 export default function Hero() {
 
     return (
-        <div className="overflow-scroll h-screen align-middle items-center">
+        <div className="h-screen align-middle items-center overflow-scroll">
             <div>
                 <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20" fill="white"/>
                 <Spotlight className="-top-24 h-[70vh]" fill="purple"/>
                 <Spotlight className="-top-28 left-96 h-[80vh]" fill="purple"/>
             </div>
             <div className="z-0 w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-                absolute top-0 left-0 flex items-center justify-center">
+                absolute inset-0 min-h-screen flex items-center justify-center">
                 <div
                     className="h-screen w-full dark:bg-gray-950 bg-gray-950 dark:bg-dot-white/[0.4] bg-dot-white/[0.2] relative flex items-center justify-center">
                     <div
@@ -23,15 +23,15 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col justify-evenly relative z-10 items-center my-auto">
-                <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] mb-24 mt-10 flex flex-col items-center justify-center">
+                <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] mb-10 sm:mb-24 mt-4 flex flex-col items-center justify-center">
                     <TextGenerateEffect
                         words="Hi! I'm Patrick"
-                        className="text-center md:text-5xl lg:text-6xl my-4"
+                        className="text-center text-5xl lg:text-6xl my-4"
                     />
                     <p className="text-gray-100 text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-lg">
                         I&apos;m currently a freshman CS major at UMass Amherst.
                     </p>
-                    <div className={"flex flex-row space-x-6"}>
+                    <div className={"flex flex-col items-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"}>
                         {/*Project button w/ rocket icon*/}
                         <Link href={"/screens/projects"} prefetch>
                             <FancyButton text={"View my projects"} svg={

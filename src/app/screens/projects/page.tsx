@@ -6,7 +6,7 @@ export default function Projects() {
         <div className="relative z-100 flex flex-col items-center justify-center">
             <TextGenerateEffect
                 words="Projects"
-                className="text-center md:text-5xl lg:text-6xl my-4"
+                className="text-center text-5xl md:text-5xl lg:text-6xl my-4"
             />
             <div className={"mx-12"}><Grid items={items}/></div>
         </div>
@@ -16,7 +16,7 @@ export default function Projects() {
 const items = [
     {
         title: "GymSauna",
-        description: "A FIRST Robotics Competition library that allows for imperative control. " +
+        description: "A FIRST Robotics Competition library that allows for imperative robot control. " +
             "Utilizes generic types, interfaces, and abstract classes to obtain a robot's state and transition safely between states.",
         className: "md:col-span-2 row-span-2 bg-gray-900",
         link: "https://github.com/FRC3950/GymSauna"
