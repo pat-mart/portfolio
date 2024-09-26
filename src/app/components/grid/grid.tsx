@@ -7,9 +7,9 @@ export default function Grid({items}: {items: {
         description: string,
         className: string,
         link: string,
-    }[]}) {
+    } []}) { // } []}) { I don't get the typescript hype
     return (
-        <BentoGrid className="max-w-full mx-auto md:auto-rows-[20rem] pb-6">
+        <BentoGrid className="max-w-full mx-auto auto-rows-[20rem] pb-6">
             {items.map((item, i) => (
                 <Link href={item.link} key={i} target="_blank" aria-disabled={item.link === ""}
                       className={`flex pb-4 ${item.link === "" ? "pointer-events-none" : ""}`}>

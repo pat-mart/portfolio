@@ -7,24 +7,19 @@ export default function ScreenLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="relative min-h-screen">
-            {/* Background Layer (with all other elements inside) */}
+        <div className="relative min-h-screen overflow-x-hidden ml-0">
             <div
-                className="relative w-full min-h-screen dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]">
-                <div
-                    className="absolute inset-0 w-full h-auto dark:bg-gray-950 bg-gray-950 dark:bg-dot-white/[0.4] bg-dot-white/[0.2]">
-                    <div
-                        className="pointer-events-none inset-0 flex items-center justify-center dark:bg-gray-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
+                className="relative w-full min-h-screen bg-white bg-grid-black-100/[0.2]">
+                <div className="absolute inset-0 w-full h-auto bg-gray-950 bg-dot-white/[0.2] z-0">
+                    <div className="pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-0"/>
                 </div>
 
-                {/* Spotlight elements */}
                 <Spotlight className="absolute -top-40 -left-10 md:-left-32 md:-top-20" fill="white"/>
                 <Spotlight className="absolute -top-24 h-[70vh]" fill="purple"/>
                 <Spotlight className="absolute -top-28 left-96 h-[80vh]" fill="purple"/>
 
-                {/* Link */}
-                <Link href="/" className={"relative z-50"}>
-                    <div className="absolute top-8 left-6 sm:top-16 sm:left-12 w-9 h-9 sm:w-8 sm:h-8 z-10 sm:size-12">
+                <Link href="/" className={"absolute z-50"}>
+                    <div className="absolute top-8 left-6 sm:top-12 sm:left-12 w-9 h-9 sm:w-8 sm:h-8 z-10 sm:size-12">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                              stroke="#c084fc" className="size-9">
                             <path strokeLinecap="round" strokeLinejoin="round"
@@ -33,8 +28,7 @@ export default function ScreenLayout({
                     </div>
                 </Link>
 
-                {/* Children Content */}
-                <div className="relative z-10 h-auto">
+                <div className="relative z-40 overflow-x-hidden h-screen">
                     {children}
                 </div>
             </div>
