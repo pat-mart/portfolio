@@ -1,6 +1,6 @@
 "use client"
 
-import FancyButton from '@/app/components/ui/fancy-button'
+import FancyButton from '@/app/components/aceternity/fancy-button'
 import {onSubmit} from '@/app/screens/blog-landing/post-actions'
 import { useFormState } from 'react-dom'
 

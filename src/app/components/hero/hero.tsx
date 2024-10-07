@@ -1,6 +1,6 @@
-import {Spotlight} from '@/app/components/ui/spotlight'
-import {TextGenerateEffect} from '@/app/components/ui/text-generate-effect'
-import FancyButton from '@/app/components/ui/fancy-button'
+import {Spotlight} from '@/app/components/aceternity/spotlight'
+import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
+import FancyButton from '@/app/components/aceternity/fancy-button'
 import Grid from '@/app/components/grid/grid'
 import Link from 'next/link'
 

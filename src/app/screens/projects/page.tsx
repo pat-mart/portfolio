@@ -1,4 +1,4 @@
-import {TextGenerateEffect} from '@/app/components/ui/text-generate-effect'
+import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
 import Grid from '@/app/components/grid/grid'
 
 export default function Projects() {

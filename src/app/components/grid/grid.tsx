@@ -1,5 +1,5 @@
 import React from "react"
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid"
+import { BentoGrid, BentoGridItem } from "@/app/components/aceternity/bento-grid"
 import Link from 'next/link'
 
 export default function Grid({items}: {items: {
