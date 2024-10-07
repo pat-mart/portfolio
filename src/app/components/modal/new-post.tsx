@@ -43,7 +43,7 @@ export default function NewPost() {
                 <div className={"space-y-2 justify-center w-full"}>
                     <h2 className={"text-xl bold text-gray-300"}>Text</h2>
                     <textarea placeholder={"Your thoughts..."} name={"body"} id={"body"}
-                              className={"w-full rounded-md pl-2 p-1 bg-gray-950 border-[#c084fc] border-2"}/>
+                              className={"w-full rounded-md pl-2 p-1 bg-gray-950 border-[#c084fc] border-2 whitespace-pre-wrap"}/>
                 </div>
             </form>
             <div className={"flex w-full justify-center mt-6"} ><FancyButton text={"Submit"} svg={submitSvg} isSubmit/></div>
