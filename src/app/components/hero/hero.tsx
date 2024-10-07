@@ -83,7 +83,7 @@ const items = [
     {
         title: "My works-in-progress",
         description: "Once upon a time, I was working on a Next.js project for sharing food recipes. I think that it was a good idea, but the project has become too big to complete by myself." +
-            "Soon, I'll choose a new project to work on. My chromatic tuner also needs some work. Reach out to me if you ever want to collaborate on a project!",
+            " Soon, I'll choose a new project to work on. My chromatic tuner also needs some work. Reach out to me if you ever want to collaborate on a project!",
         className: "md:col-span-3 col-span-2 row-span-3 bg-gray-900 flex w-full",
         link: ""
     }

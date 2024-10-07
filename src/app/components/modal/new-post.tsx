@@ -25,7 +25,7 @@ export default function NewPost() {
 
     return (
         <div className={"flex flex-col w-full justify-start items-start"}>
-            <form className={"flex flex-col space-y-5 justify-start items-start w-full"} id="newPostForm" action={formAction}>
+            <form className={"flex flex-col space-y-5 justify-start items-start w-full whitespace-normal"} id="newPostForm" action={formAction}>
                 <div className={"flex flex-row space-x-3 items-center"}>
                     <div className={"flex flex-col space-y-2 justify-center"}>
                         <h2 className={"text-xl bold text-gray-300"}>Title</h2>
