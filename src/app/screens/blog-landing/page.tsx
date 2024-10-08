@@ -28,14 +28,14 @@ export default async function BlogLanding() {
     const items = await fetchPreviews()
 
     return (
-        <div className="relative z-100 flex flex-col items-center justify-center">
+        <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
             <div className={"mt-12 sm:mt-0"}><TextGenerateEffect
                 words="Pat Thoughts"
                 className="text-center text-5xl md:text-5xl lg:text-6xl my-4"
             /></div>
             <BlogLandingClient/>
             <Suspense>
-                <div className={"mx-12"}>{items.map((item, i) => (
+                <div className={"mx-12 overflow-hidden"}>{items.map((item, i) => (
                     <Link href={item.link} key={i} aria-disabled={item.link === ""}
                           className={`flex pb-4 w-full ${item.link === "" ? "pointer-events-none" : ""}`}>
                         <BentoGridItem

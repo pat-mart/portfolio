@@ -7,7 +7,7 @@ export default function ScreenLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="relative min-h-screen overflow-x-hidden ml-0">
+        <div className="relative min-h-screen overflow-hidden ml-0">
             <div
                 className="relative w-full min-h-screen bg-white bg-grid-black-100/[0.2]">
                 <div className="absolute inset-0 w-full h-auto bg-gray-950 bg-dot-white/[0.2] z-0">
@@ -28,7 +28,7 @@ export default function ScreenLayout({
                     </div>
                 </Link>
 
-                <div className="relative z-40 overflow-x-hidden h-screen">
+                <div className="relatiive z-40 overflow-x-hidden h-full overflow-y-scroll pb-12 sm:pb-0">
                     {children}
                 </div>
             </div>

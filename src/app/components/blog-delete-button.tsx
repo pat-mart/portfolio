@@ -3,12 +3,15 @@
 import React from 'react'
 import {deleteDoc, doc} from '@firebase/firestore'
 import {fbAuth, firestoreDb} from '@/app/fb/init'
+import {getAuth} from '@firebase/auth'
 
 export default function BlogDeleteButton({post} : {post: any}) {
 
     function onDelete(postId: string) {
         try {
-            if(fbAuth.currentUser){
+            const auth = getAuth()
+            if(auth.currentUser){
+                console.log("Current user")
                 const docRef = doc(firestoreDb, 'posts', postId)
                 deleteDoc(docRef).catch(e => console.error(e)).catch(e => console.error(e))
             }

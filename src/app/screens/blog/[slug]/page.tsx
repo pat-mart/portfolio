@@ -26,13 +26,13 @@ export default async function BlogPost({params} : {params: {slug: string}}) {
     }
 
     return (
-        <div className="relative z-100 flex flex-col items-center justify-start mx-4 sm:mx-12">
+        <div className="relative z-100 flex flex-col items-center justify-start mx-8 sm:mx-12">
             <div className={"mt-12 sm:mt-0"}>
                 <TextGenerateEffect
                 words={post.title}
                 className="text-center text-5xl md:text-5xl lg:text-6xl my-4"/>
             </div>
-            <div className={"flex flex-col w-full"}>
+            <div className={"flex flex-col w-full overflow-y-scroll"}>
                 <Suspense>
                     <div className={"flex flex-row w-full justify-between items-center"}>
                         <h2 className={"text-gray-400 text-xl mt-4 sm:mt-8 mb-6 sm:mb-12"}>{post.datePosted}</h2>
