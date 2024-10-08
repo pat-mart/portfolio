@@ -32,6 +32,7 @@ export const BentoGridItem = ({
     header?: React.ReactNode;
     icon?: React.ReactNode;
 }) => {
+
     return (
         <div
             className={cn(
@@ -45,8 +46,8 @@ export const BentoGridItem = ({
                 <div className="font-sans text-xl font-bold dark:text-neutral-200 mb-2 mt-2 text-purple-400">
                     {title}
                 </div>
-                <div className="font-sans font-normal text-neutral-400 text-md dark:text-neutral-300 leading-7">
-                    {description}
+                <div className="font-sans font-normal text-neutral-400 text-md dark:text-neutral-300 leading-7 h-full">
+                    <p className={"rows-whitespace-pre-wrap h-full"}>{(description! as string).replace(/ {2}/g, "\n")}</p>
                 </div>
             </div>
         </div>

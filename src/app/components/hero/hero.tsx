@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Hero() {
 
     return (
-        <div className="h-screen align-middle items-center overflow-scroll">
+        <div className="h-screen align-middle items-center overflow-y-scroll">
             <div>
                 <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20" fill="white"/>
                 <Spotlight className="-top-24 h-[70vh]" fill="purple"/>
