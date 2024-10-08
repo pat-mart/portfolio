@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Hero() {
 
     return (
-        <div className="h-screen align-middle items-center overflow-y-scroll">
+        <div className="h-full align-middle items-center">
             <div>
                 <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20" fill="white"/>
                 <Spotlight className="-top-24 h-[70vh]" fill="purple"/>
@@ -22,7 +22,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="flex flex-col justify-evenly relative z-10 items-center my-auto">
+            <div className="flex flex-col justify-evenly relative h-full w-full z-10 items-center my-auto overflow-y-scroll">
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] mb-10 sm:mb-24 mt-4 flex flex-col items-center justify-center">
                     <TextGenerateEffect
                         words="Hi! I'm Patrick"
