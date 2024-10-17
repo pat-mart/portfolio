@@ -13,7 +13,7 @@ export default async function BlogPost({params} : {params: {slug: string}}) {
 
     const post = {
         id: rawDoc.id,
-        body: data.body,
+        body: data.body as string,
         datePosted:  data.datePosted.toDate().toLocaleString('en-US', {
             month: 'long',
             day: 'numeric',
@@ -38,7 +38,8 @@ export default async function BlogPost({params} : {params: {slug: string}}) {
                         <h2 className={"text-gray-400 text-xl mt-4 sm:mt-8 mb-6 sm:mb-12"}>{post.datePosted}</h2>
                         <BlogDeleteButton post={post}></BlogDeleteButton>
                     </div>
-                    <p className={"text-gray-200 text-lg"}>{post.body}</p>
+                    <p className={"text-gray-200 text-lg"}>{post.body.split("\n").map((line, index) => {
+                        return <React.Fragment key={index}>{line} <br  /> </React.Fragment>})}</p>
                 </Suspense>
             </div>
         </div>

@@ -23,14 +23,16 @@ export const BentoGridItem = ({
                                   className,
                                   title,
                                   description,
+    date,
                                   header,
                                   icon,
                               }: {
-    className?: string;
-    title?: string | React.ReactNode;
-    description?: string | React.ReactNode;
-    header?: React.ReactNode;
-    icon?: React.ReactNode;
+    className?: string
+    title?: string | React.ReactNode
+    date?: string
+    description?: string | React.ReactNode
+    header?: React.ReactNode
+    icon?: React.ReactNode
 }) => {
 
     return (
@@ -43,11 +45,12 @@ export const BentoGridItem = ({
             {header}
             <div className="group-hover/bento:translate-x-2 transition duration-200">
                 {icon}
-                <div className="font-sans text-xl font-bold dark:text-neutral-200 mb-2 mt-2 text-purple-400">
-                    {title}
+                <div className="font-sans text-xl font-bold dark:text-neutral-200 mb-2 mt-2 text-purple-400 space-y-1">
+                    <h1>{title}</h1>
+                    <h2 className={"text-gray-500 font-normal text-md"}>{date}</h2>
                 </div>
-                <div className="font-sans font-normal text-neutral-400 text-md dark:text-neutral-300 leading-7 h-full">
-                    <p className={"rows-whitespace-pre-wrap h-full"}>{(description! as string).replace(/ {2}/g, "\n")}</p>
+                <div className="font-sans font-normal text-neutral-400 text-md dark:text-neutral-300 leading-7 w-full">
+                    <p className={"h-full"}>{(description as string).trim()}</p>
                 </div>
             </div>
         </div>

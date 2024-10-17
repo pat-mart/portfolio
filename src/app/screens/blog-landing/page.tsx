@@ -18,7 +18,15 @@ export default async function BlogLanding() {
                 link: '/screens/blog/' + doc.id,
                 title: data.title,
                 description: data.body.substring(0, 200),
-                className: "col-span-2 row-span-2 w-full bg-gray-900"
+                className: "col-span-2 row-span-2 w-full bg-gray-900",
+                datePosted: data.datePosted.toDate().toLocaleString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false,
+                }),
             }
         })
 
@@ -41,7 +49,8 @@ export default async function BlogLanding() {
                         <BentoGridItem
                             key={i}
                             title={item.title}
-                            description={item.description + '...'}
+                            description={item.description.trim() + '...'}
+                            date={item.datePosted}
                             className={item.className}
                         />
                     </Link>

@@ -19,7 +19,7 @@ const nextConfig = {
             ],
         },
         {
-            source: '/screens/blog/',
+            source: '/screens/blog/blog-landing',
             headers: [
                 {
                     key: 'Cache-Control',
