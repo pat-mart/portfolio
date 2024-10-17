@@ -4,7 +4,8 @@ import {doc, getDoc} from '@firebase/firestore'
 import {firestoreDb} from '@/app/fb/init'
 import BlogDeleteButton from '@/app/components/blog-delete-button'
 
-export default async function BlogPost({params} : {params: {slug: string}}) {
+export default async function BlogPost(props: {params: Promise<{slug: string}>}) {
+    const params = await props.params;
 
     const rawDoc = doc(firestoreDb, 'posts', params.slug)
     const postSnapshot = await getDoc(rawDoc)

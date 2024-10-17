@@ -13,7 +13,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, showImage, children }) =
 
     return (
         <div className={"fixed bg-blend-overlay inset-0 bg-black bg-opacity-20 backdrop-blur-md flex justify-center items-center z-50 w-screen h-screen !ml-0 overflow-y-scroll"}>
-            <div className="bg-gray-900 rounded-md shadow-lg w-[90vw] sm:w-[60vw] relative z-50 overflow-scroll">
+            <div className="bg-gray-900 rounded-md shadow-lg w-[90vw] sm:w-[60vw] relative overflow-scroll">
                 <button
                     className="absolute top-3 right-3 text-xl font-bold text-gray-200"
                     onClick={onClose}

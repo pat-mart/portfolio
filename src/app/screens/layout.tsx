@@ -18,7 +18,7 @@ export default function ScreenLayout({
                 <Spotlight className="absolute -top-24 h-[70vh]" fill="purple"/>
                 <Spotlight className="absolute -top-28 left-96 h-[80vh]" fill="purple"/>
 
-                <Link href="/" className={"absolute z-50"}>
+                <Link href="/" className={"absolute z-20"}>
                     <div className="absolute top-8 left-6 sm:top-12 sm:left-12 w-9 h-9 sm:w-8 sm:h-8 z-10 sm:size-12 opacity-70">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                              stroke="#c084fc" className="size-9">
