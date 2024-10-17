@@ -32,10 +32,10 @@ export const TextGenerateEffect = ({
 
     const renderWords = () => {
         return (
-            <motion.div ref={scope}>
+            <div ref={scope}>
                 {wordsArray.map((word, idx) => {
                     return (
-                        <motion.span
+                        <span
                             key={word + idx}
                             className="text-purple-400"
                             style={{
@@ -43,10 +43,10 @@ export const TextGenerateEffect = ({
                             }}
                         >
                             {word}{" "}
-                        </motion.span>
+                        </span>
                     );
                 })}
-            </motion.div>
+            </div>
         );
     };
 

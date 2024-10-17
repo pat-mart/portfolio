@@ -40,7 +40,7 @@ export default async function BlogPost(props: {params: Promise<{slug: string}>})
                         <BlogDeleteButton post={post}></BlogDeleteButton>
                     </div>
                     <p className={"text-gray-200 text-lg"}>{post.body.split("\n").map((line, index) => {
-                        return <React.Fragment key={index}>{line} <br  /> </React.Fragment>})}</p>
+                        return <div key={index}>{line} <br  /> </div>})}</p>
                 </Suspense>
             </div>
         </div>
