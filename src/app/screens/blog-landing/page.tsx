@@ -30,7 +30,7 @@ export default async function BlogLanding() {
             }
         })
 
-        return list.reverse()
+        return list
     }
 
     const items = await fetchPreviews()
