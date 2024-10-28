@@ -60,14 +60,13 @@ const items = [
     {
         title: "About me",
         description: "I'm from Long Island, New York. In my free time, I'm big into photography and astronomy (and coding of course). " +
-            "I also started playing guitar a few months ago and I'm a huge fan of all genres of music. Ask me what I've been listening to!",
+            "I also started playing guitar a few months ago and I'm a huge fan of all genres of music. Ask me about the Fibonacci sequence in Tool's Lateralus!",
         className: " row-span-2 bg-gray-900 flex w-full",
         link: ""
     },
     {
         title: "My works-in-progress",
-        description: "Once upon a time, I was working on a Next.js project for sharing food recipes. I think that it was a good idea, but the project has become too big to complete by myself." +
-            " Soon, I'll choose a new project to work on. My chromatic tuner also needs some work. Reach out to me if you ever want to collaborate on a project!",
+        description: "I'm working on refining my guitar tuner and my TensorDining project. Labeling data is more boring than I expected it to be. Hack UMass is also coming up and I'm participating with a bunch of my friends. Reach out to me if you want to collab on a project!",
         className: "md:col-span-3 col-span-2 row-span-3 bg-gray-900 flex w-full",
         link: ""
     }

@@ -65,26 +65,7 @@ export default function Hero() {
                         </Link>
                     </div>
                 </div>
-                <Grid items={items}></Grid>
             </div>
         </div>
     )
 }
-
-
-const items = [
-    {
-        title: "About me",
-        description: "I'm from Long Island, New York. In my free time, I'm big into photography and astronomy (and coding of course). " +
-            "I also started playing guitar a few months ago and I'm a huge fan of all genres of music. Ask me what I've been listening to!",
-        className: " row-span-2 bg-gray-900 flex w-full",
-        link: ""
-    },
-    {
-        title: "My works-in-progress",
-        description: "Once upon a time, I was working on a Next.js project for sharing food recipes. I think that it was a good idea, but the project has become too big to complete by myself." +
-            "So, I'm currently working on training a custom multiple-object detector in Python with TensorFlow. Reach out to me if you ever want to collaborate!",
-        className: "md:col-span-3 col-span-2 row-span-3 bg-gray-900 flex w-full",
-        link: ""
-    }
-];

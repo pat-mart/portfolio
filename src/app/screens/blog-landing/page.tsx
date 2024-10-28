@@ -12,7 +12,7 @@ export default async function BlogLanding() {
         const posts = collection(firestoreDb, 'posts')
         const postSnapshot = await getDocs(posts)
 
-        const list = postSnapshot.docs.map(doc => {
+        return postSnapshot.docs.map(doc => {
             const data = doc.data()
             return {
                 link: '/screens/blog/' + doc.id,
@@ -29,8 +29,6 @@ export default async function BlogLanding() {
                 }),
             }
         })
-
-        return list
     }
 
     const items = await fetchPreviews()

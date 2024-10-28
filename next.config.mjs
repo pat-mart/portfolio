@@ -26,6 +26,15 @@ const nextConfig = {
                     value: 'no-store',
                 },
             ],
+        },
+        {
+            source: '/screens/home',
+            headers: [
+                {
+                    key: 'Cache-Control',
+                    value: 'no-store',
+                },
+            ],
         }
     ],
 

@@ -15,10 +15,9 @@ export default function Projects() {
 
 const items = [
     {
-        title: "GymSauna",
-        description: "A FIRST Robotics Competition library that allows for imperative robot control. " +
-            "Utilizes generic types, interfaces, and abstract classes to obtain a robot's state and transition safely between states.",
-        className: "md:col-span-2 row-span-2 bg-gray-900",
+        title: "TensorDining",
+        description: "A custom deep neural network built with Pytorch. Automated data collection script. Labeling that data, however, was possibly the most boring thing I've ever done in my entire life. Working on making the model more accurate and doing more labeling.",
+        className: "md:col-span-1 row-span-3 bg-gray-900",
         link: "https://github.com/FRC3950/GymSauna"
     },
     {
