@@ -1,7 +1,7 @@
 import {firestoreDb} from '@/app/fb/init'
 import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
 import React, {Suspense} from 'react'
-import {collection, getDocs} from '@firebase/firestore'
+import {collection, getDocs, getDocsFromServer} from '@firebase/firestore'
 import Link from 'next/link'
 import {BentoGridItem} from '@/app/components/aceternity/bento-grid'
 import BlogLandingClient from '@/app/screens/blog-landing/blog-landing-client'
@@ -10,7 +10,7 @@ export default async function BlogLanding() {
 
     async function fetchPreviews() {
         const posts = collection(firestoreDb, 'posts')
-        const postSnapshot = await getDocs(posts)
+        const postSnapshot = await getDocsFromServer(posts)
 
         return postSnapshot.docs.map(doc => {
             const data = doc.data()
