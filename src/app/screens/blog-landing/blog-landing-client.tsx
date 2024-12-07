@@ -17,7 +17,6 @@ export default function BlogLandingClient() {
     const [hasNewPost, setHasNewPost] = useState<boolean>(false)
     const [hasError, setHasError] = useState<boolean>(false)
 
-
     const onSignIn = async () => {
         const auth = getAuth()
 
@@ -32,7 +31,7 @@ export default function BlogLandingClient() {
                     setHasError(false)
 
                     setPassword('')
-                }).catch(e => setHasError(true))
+                }).catch(_ => setHasError(true))
         } catch (e) {
             setHasError(true)
         }

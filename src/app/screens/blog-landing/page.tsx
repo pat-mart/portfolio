@@ -1,7 +1,7 @@
 import {firestoreDb} from '@/app/fb/init'
 import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
-import React, {Suspense} from 'react'
-import {collection, getDocs, getDocsFromServer} from '@firebase/firestore'
+import React from 'react'
+import {collection, getDocsFromServer} from '@firebase/firestore'
 import Link from 'next/link'
 import {BentoGridItem} from '@/app/components/aceternity/bento-grid'
 import BlogLandingClient from '@/app/screens/blog-landing/blog-landing-client'
@@ -9,6 +9,8 @@ import BlogLandingClient from '@/app/screens/blog-landing/blog-landing-client'
 export default async function BlogLanding() {
 
     async function fetchPreviews() {
+        console.log("Fetching previews")
+
         const posts = collection(firestoreDb, 'posts')
         const postSnapshot = await getDocsFromServer(posts)
 
@@ -40,20 +42,18 @@ export default async function BlogLanding() {
                 className="text-center text-5xl md:text-5xl lg:text-6xl my-4"
             /></div>
             <BlogLandingClient/>
-            <Suspense>
-                <div className={"mx-12 overflow-hidden"}>{items.map((item, i) => (
-                    <Link href={item.link} key={i} aria-disabled={item.link === ""}
-                          className={`flex pb-4 w-full ${item.link === "" ? "pointer-events-none" : ""}`}>
-                        <BentoGridItem
-                            key={i}
-                            title={item.title}
-                            description={item.description.trim() + '...'}
-                            date={item.datePosted}
-                            className={item.className}
-                        />
-                    </Link>
-                ))}</div>
-            </Suspense>
+            <div className={"mx-12 overflow-hidden"}>{items.map((item, i) => (
+                <Link href={item.link} key={i} aria-disabled={item.link === ""}
+                      className={`flex pb-4 w-full ${item.link === "" ? "pointer-events-none" : ""}`}>
+                    <BentoGridItem
+                        key={i}
+                        title={item.title}
+                        description={item.description.trim() + '...'}
+                        date={item.datePosted}
+                        className={item.className}
+                    />
+                </Link>
+            ))}</div>
         </div>
     )
 }
