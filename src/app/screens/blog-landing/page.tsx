@@ -21,7 +21,8 @@ export default async function BlogLanding() {
                 title: data.title,
                 description: data.body.substring(0, 200),
                 className: "col-span-2 row-span-2 w-full bg-gray-900",
-                datePosted: data.datePosted.toDate().toLocaleString('en-US', {
+                date: data.datePosted.toDate(),
+                datePostedStr: data.datePosted.toDate().toLocaleString('en-US', {
                     month: 'long',
                     day: 'numeric',
                     year: 'numeric',
@@ -33,8 +34,7 @@ export default async function BlogLanding() {
         })
     }
 
-    const items = await fetchPreviews()
-
+    const items = (await fetchPreviews()).sort((a, b) => b.date - a.date)
     return (
         <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
             <div className={"mt-12 sm:mt-0"}><TextGenerateEffect
@@ -49,7 +49,7 @@ export default async function BlogLanding() {
                         key={i}
                         title={item.title}
                         description={item.description.trim() + '...'}
-                        date={item.datePosted}
+                        date={item.datePostedStr}
                         className={item.className}
                     />
                 </Link>
@@ -57,8 +57,3 @@ export default async function BlogLanding() {
         </div>
     )
 }
-
-
-
-
-

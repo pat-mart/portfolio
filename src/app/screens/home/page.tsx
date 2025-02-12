@@ -59,14 +59,14 @@ export default function Home() {
 const items = [
     {
         title: "About me",
-        description: "I'm from Long Island, New York. I'm currently a SWE intern for a startup called TORQ Sports. In January, I'll be doing Goldman Sachs' Engineering Possibilities Summit program, which I'm very excited for. In my free time, I'm big into photography and astronomy (and coding of course). " +
-            "I also started playing guitar a few months ago and I'm a huge fan of all genres of music. Ask me about the Fibonacci sequence in Tool's Lateralus!",
+        description: "I'm from Long Island, New York. I'm currently a SWE intern for a startup called TORQ Sports. I'm also remotely participating in Goldman Sachs' Engineering Possibilities Summit program. My hobbies aside from coding include photography, astronomy, and playing guitar. " +
+            "I also started playing guitar a few months ago and I'm a huge music fan. Send me recommendations!",
         className: " row-span-2 bg-gray-900 flex w-full",
         link: ""
     },
     {
         title: "My works-in-progress",
-        description: "I'm working on refining my guitar tuner and my TensorDining project. I'm looking to get into research, too. Labeling data is more boring than I expected it to be. Hack UMass is also coming up and I'm participating with a bunch of my friends. Reach out to me if you want to collab on a project!",
+        description: "I'm working on refining my TensorDining project and brainstorming some new projects. I'm really enjoying my new classes this semester. Reach out to me if you want to collab on a project!",
         className: "md:col-span-3 col-span-2 row-span-3 bg-gray-900 flex w-full",
         link: ""
     }
