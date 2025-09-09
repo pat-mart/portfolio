@@ -13,7 +13,7 @@ export default function Home() {
                     className="text-center text-5xl lg:text-6xl my-4"
                 />
                 <p className="text-gray-100 text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-lg">
-                    I&apos;m currently a freshman CS major at UMass Amherst. Check out my new blog, Pat Thoughts!
+                    I&apos;m currently a sophomore CS major at UMass Amherst. Check out my blog, Pat Thoughts!
                 </p>
                 <div className={"flex flex-col items-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"}>
                     <Link href={"/screens/blog-landing"}>
@@ -59,14 +59,13 @@ export default function Home() {
 const items = [
     {
         title: "About me",
-        description: "I'm from Long Island, New York. I'm currently a SWE intern for a startup called TORQ Sports. I'm also remotely participating in Goldman Sachs' Engineering Possibilities Summit program. My hobbies aside from coding include photography, astronomy, and playing guitar. " +
-            "I also started playing guitar a few months ago and I'm a huge music fan. Send me recommendations!",
+        description: "I'm from Long Island, New York. I am a sophomore CS major and I'm doing research in the Theory Group at UMass this semester. When not behind a keyboard, I enjoy playing guitar and (astro)photography.",
         className: " row-span-2 bg-gray-900 flex w-full",
         link: ""
     },
     {
         title: "My works-in-progress",
-        description: "I'm working on refining my TensorDining project and brainstorming some new projects. I'm really enjoying my new classes this semester. Reach out to me if you want to collab on a project!",
+        description: "I'm working on an audio visualizer in Go with a game engine and portaudio. Reach out to me if you want to collab on a project!",
         className: "md:col-span-3 col-span-2 row-span-3 bg-gray-900 flex w-full",
         link: ""
     }
