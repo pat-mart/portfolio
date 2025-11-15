@@ -16,7 +16,7 @@ export default function Home() {
                     I&apos;m currently a sophomore CS major at UMass Amherst. Check out my blog, Pat Thoughts!
                 </p>
                 <div className={"flex flex-col items-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"}>
-                    <Link href={"/screens/blog-landing"}>
+                    <Link href={"/blog-landing"}>
                         <FancyButton text={"Blog"} svg={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                  strokeWidth={1.5} stroke="#c084fc" className="size-6">
@@ -25,7 +25,7 @@ export default function Home() {
                             </svg>
                         }/>
                     </Link>
-                    <Link href={"/screens/projects"} prefetch>
+                    <Link href={"/projects"} prefetch>
                         <FancyButton text={"Projects"} svg={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                  strokeWidth={1.5} stroke="#c084fc" className="size-6">
@@ -59,7 +59,7 @@ export default function Home() {
 const items = [
     {
         title: "About me",
-        description: "I'm from Long Island, New York. I am a sophomore CS major and I'm doing research in the Theory Group at UMass this semester. When not behind a keyboard, I enjoy playing guitar and (astro)photography.",
+        description: "I'm from Long Island, New York. I am a sophomore CS major at UMass Amherst and I'm doing research on graphs with Prof. Hung Le (via Early Research Scholars Program) this semester. When not behind a screen, I enjoy playing guitar and (astro)photography.",
         className: " row-span-2 bg-gray-900 flex w-full",
         link: ""
     },

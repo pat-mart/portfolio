@@ -1,7 +1,6 @@
 import {Spotlight} from '@/app/components/aceternity/spotlight'
 import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
 import FancyButton from '@/app/components/aceternity/fancy-button'
-import Grid from '@/app/components/grid/grid'
 import Link from 'next/link'
 
 export default function Hero() {
@@ -32,7 +31,7 @@ export default function Hero() {
                         I&apos;m currently a freshman CS major at UMass Amherst. Check out my new blog, Pat Thoughts!
                     </p>
                     <div className={"flex flex-col items-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"}>
-                        <Link href={"/screens/blog-landing"}>
+                        <Link href={"/(screens)/blog-landing"}>
                             <FancyButton text={"Blog"} svg={
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                      strokeWidth={1.5} stroke="#c084fc" className="size-6">
@@ -41,7 +40,7 @@ export default function Hero() {
                                 </svg>
                             }/>
                         </Link>
-                        <Link href={"/screens/projects"} prefetch>
+                        <Link href={"/(screens)/projects"} prefetch>
                             <FancyButton text={"Projects"} svg={
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                      strokeWidth={1.5} stroke="#c084fc" className="size-6">

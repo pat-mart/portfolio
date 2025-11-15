@@ -1,7 +1,7 @@
 "use client"
 
 import FancyButton from '@/app/components/aceternity/fancy-button'
-import {onSubmit} from '@/app/screens/blog-landing/post-actions'
+import {onSubmit} from '@/app/(screens)/blog-landing/post-actions'
 import { useFormState } from 'react-dom'
 
 
@@ -13,7 +13,7 @@ export default function NewPost() {
     }
 
     // @ts-ignore
-    const [state, formAction] = useFormState(onSubmit, initialState)
+    const [_, formAction] = useFormState(onSubmit, initialState)
 
     const submitSvg = (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#c084fc"

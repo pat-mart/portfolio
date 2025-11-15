@@ -10,7 +10,7 @@ const nextConfig = {
     },
     headers: () => [
         {
-            source: '/screens/blog-landing',
+            source: '/blog-landing',
             headers: [
                 {
                     key: 'Cache-Control',
@@ -19,7 +19,7 @@ const nextConfig = {
             ],
         },
         {
-            source: '/screens/blog/blog-landing',
+            source: '/blog/blog-landing',
             headers: [
                 {
                     key: 'Cache-Control',
@@ -28,7 +28,7 @@ const nextConfig = {
             ],
         },
         {
-            source: '/screens/home',
+            source: '/home',
             headers: [
                 {
                     key: 'Cache-Control',
@@ -42,7 +42,7 @@ const nextConfig = {
       return [
           {
               source: '/',
-              destination: '/screens/home',
+              destination: '/home',
               permanent: true
           }
       ]

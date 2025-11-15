@@ -4,7 +4,7 @@ import React from 'react'
 import {collection, getDocsFromServer} from '@firebase/firestore'
 import Link from 'next/link'
 import {BentoGridItem} from '@/app/components/aceternity/bento-grid'
-import BlogLandingClient from '@/app/screens/blog-landing/blog-landing-client'
+import BlogLandingClient from '@/app/(screens)/blog-landing/blog-landing-client'
 
 export default async function BlogLanding() {
 
