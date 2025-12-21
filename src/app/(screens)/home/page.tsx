@@ -13,7 +13,7 @@ export default function Home() {
                     className="text-center text-5xl lg:text-6xl my-4"
                 />
                 <p className="text-gray-100 text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-lg">
-                    I&apos;m currently a sophomore CS major at UMass Amherst. Check out my blog, Pat Thoughts!
+                    I&apos;m currently a CS major at UMass Amherst. Check out my blog, Pat Thoughts!
                 </p>
                 <div className={"flex flex-col items-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"}>
                     <Link href={"/blog-landing"}>
@@ -59,7 +59,7 @@ export default function Home() {
 const items = [
     {
         title: "About me",
-        description: "I'm from Long Island, New York. I am a sophomore CS major at UMass Amherst and I'm doing research on graphs with Prof. Hung Le (via Early Research Scholars Program) this semester. When not behind a screen, I enjoy playing guitar and (astro)photography.",
+        description: "I'm from Long Island, New York. I am a CS major at UMass Amherst and I'm doing research on graphs with Prof. Hung Le (via Early Research Scholars Program) this semester. When not behind a screen, I enjoy playing guitar and (astro)photography.",
         className: " row-span-2 bg-gray-900 flex w-full",
         link: ""
     },
