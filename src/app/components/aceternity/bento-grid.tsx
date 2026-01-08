@@ -46,7 +46,7 @@ export const BentoGridItem = ({
             {header}
             <div className="group-hover/bento:translate-x-2 transition duration-200">
                 {icon}
-                <div className="font-sans text-xl font-bold text-teal-700 mb-2 mt-2 space-y-1">
+                <div className="font-sans text-xl font-bold text-teal-600 mb-2 mt-2 space-y-1">
                     <h1>{title}</h1>
                     <h2 className={"text-gray-500 font-normal text-md"}>{date}</h2>
                 </div>

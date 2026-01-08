@@ -8,11 +8,10 @@ export default function Home() {
         <div className="relative z-100 mx-3 sm:mx-12 mt-8 sm:mt-4 flex flex-col items-center justify-center overflow-hidden">
             <div
                 className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] mb-10 sm:mb-24 mt-4 flex flex-col items-center justify-center">
-                <p className="text-teal-700 text-left md:tracking-wider mb-8 text-sm md:text-lg lg:text-lg font-bold font-mono">
+                <p className="text-teal-600 text-left md:tracking-wider mb-8 text-sm md:text-lg lg:text-lg font-bold font-mono">
                     Patrick Martin
                 </p>
                 <div className={"flex flex-col items-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"}>
-                    <p className="text-gray-300 text-left md:text-md lg:text-lg font-mono">&gt; cd</p>
                     <Link href={"/blog-landing"}>
                         <FancyButton text={"blog"}/>
                     </Link>

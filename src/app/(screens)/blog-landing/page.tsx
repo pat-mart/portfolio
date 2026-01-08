@@ -38,10 +38,10 @@ export default async function BlogLanding() {
     return (
         <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
             <div className={"mt-12 sm:mt-0"}>
-                <p className="text-center text-5xl md:text-5xl lg:text-6xl my-4 text-teal-700 font-mono">pat thoughts</p>
+                <p className="text-center text-5xl md:text-5xl lg:text-6xl my-4 text-teal-600 font-mono">pat thoughts</p>
             </div>
             <div className={"mt-12 sm:mt-6"}>
-                <p className={"font-mono"}>firebase costs money now so i am currently figuring out where to store these blog posts</p>
+                <p className={"text-center font-mono"}>firebase costs money now so i am currently figuring out where to store these blog posts</p>
             </div>
             <BlogLandingClient/>
             <div className={"mx-12 overflow-hidden"}>{items.map((item, i) => (

@@ -18,8 +18,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, showImage, children }) =
                     className="absolute top-3 right-3 text-xl font-bold text-gray-200"
                     onClick={onClose}
                 >
-                    <div className={"w-6 h-6 text-teal-700"}>
-                        <button className={"text-teal-700"}>x</button>
+                    <div className={"w-6 h-6 text-teal-600"}>
+                        <button className={"text-teal-600"}>x</button>
                     </div>
                 </button>
                 <div className={"text-gray-200 m-4 "}>{children}</div>

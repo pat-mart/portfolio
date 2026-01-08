@@ -4,10 +4,7 @@ import Grid from '@/app/components/grid/grid'
 export default function Projects() {
     return (
         <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
-            <TextGenerateEffect
-                words="Projects"
-                className="text-center text-5xl md:text-5xl lg:text-6xl my-4"
-            />
+            <p className="text-center text-5xl md:text-5xl lg:text-6xl my-4 font-mono text-teal-600">projects</p>
             <div className={"mx-12 overflow-hidden"}><Grid items={items}/></div>
         </div>
     )
