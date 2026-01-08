@@ -46,7 +46,7 @@ export default function NewPost() {
                               className={"w-full rounded-md pl-2 p-1 bg-gray-950 border-[#c084fc] border-2 whitespace-pre-wrap"}/>
                 </div>
             </form>
-            <div className={"flex w-full justify-center mt-6"} ><FancyButton text={"Submit"} svg={submitSvg} isSubmit/></div>
+            <div className={"flex w-full justify-center mt-6"} ><FancyButton text={"Submit"} isSubmit/></div>
         </div>
     )
 }
