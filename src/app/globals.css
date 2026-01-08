@@ -16,6 +16,11 @@
   }
 }
 
+@font-face {
+  font-family: "Bjork";
+  src: url("../fonts/bjork.ttf");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

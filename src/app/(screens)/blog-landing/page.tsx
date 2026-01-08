@@ -37,10 +37,12 @@ export default async function BlogLanding() {
     const items = (await fetchPreviews()).sort((a, b) => b.date - a.date)
     return (
         <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
-            <div className={"mt-12 sm:mt-0"}><TextGenerateEffect
-                words="Pat Thoughts"
-                className="text-center text-5xl md:text-5xl lg:text-6xl my-4"
-            /></div>
+            <div className={"mt-12 sm:mt-0"}>
+                <p className="text-center text-5xl md:text-5xl lg:text-6xl my-4 text-teal-700 font-mono">pat thoughts</p>
+            </div>
+            <div className={"mt-12 sm:mt-6"}>
+                <p className={"font-mono"}>firebase costs money now so i am currently figuring out where to store these blog posts</p>
+            </div>
             <BlogLandingClient/>
             <div className={"mx-12 overflow-hidden"}>{items.map((item, i) => (
                 <Link href={item.link} key={i} aria-disabled={item.link === ""}
