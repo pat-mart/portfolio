@@ -75,7 +75,7 @@ export default function BlogLandingClient() {
                 </Modal>
             </div>
             <div className={"relative z-10"}>
-                <FancyButton text={"New post"}
+                <FancyButton text={"new post"}
                              onClick={() => {
                                  if (fbAuth.currentUser) {
                                      setHasNewPost(true)

@@ -35,5 +35,5 @@ export async function onSubmit(prevState: any, formData: FormData) {
         console.error(e)
     }
 
-    redirect("/screens/blog-landing")
+    redirect("/blog-landing")
 }

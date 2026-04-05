@@ -20,6 +20,7 @@
     "next-themes": "^0.3.0",
     "react": "19.0.0-rc-cd22717c-20241013",
     "react-dom": "19.0.0-rc-cd22717c-20241013",
+    "react-markdown": "^10.1.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-colors": "^2.0.0",

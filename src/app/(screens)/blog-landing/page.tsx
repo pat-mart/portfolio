@@ -1,5 +1,4 @@
 import {firestoreDb} from '@/app/fb/init'
-import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
 import React from 'react'
 import {collection, getDocsFromServer} from '@firebase/firestore'
 import Link from 'next/link'
@@ -9,7 +8,6 @@ import BlogLandingClient from '@/app/(screens)/blog-landing/blog-landing-client'
 export default async function BlogLanding() {
 
     async function fetchPreviews() {
-        console.log("Fetching previews")
 
         const posts = collection(firestoreDb, 'posts')
         const postSnapshot = await getDocsFromServer(posts)
@@ -17,7 +15,7 @@ export default async function BlogLanding() {
         return postSnapshot.docs.map(doc => {
             const data = doc.data()
             return {
-                link: '/screens/blog/' + doc.id,
+                link: '/blog/' + doc.id,
                 title: data.title,
                 description: data.body.substring(0, 200),
                 className: "col-span-2 row-span-2 w-full bg-gray-900",
@@ -39,9 +37,6 @@ export default async function BlogLanding() {
         <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
             <div className={"mt-12 sm:mt-0"}>
                 <p className="text-center text-5xl md:text-5xl lg:text-6xl my-4 text-teal-600 font-mono">pat thoughts</p>
-            </div>
-            <div className={"mt-12 sm:mt-6 text-neutral-400 text-md dark:text-neutral-30"}>
-                <p className={"text-center font-mono text-gray-100"}>firebase costs money now so i am currently figuring out where to store these blog posts</p>
             </div>
             <BlogLandingClient/>
             <div className={"mx-12 overflow-hidden"}>{items.map((item, i) => (

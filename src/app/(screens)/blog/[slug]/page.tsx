@@ -1,8 +1,8 @@
-import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
 import React, {Suspense} from 'react'
 import {doc, getDoc} from '@firebase/firestore'
 import {firestoreDb} from '@/app/fb/init'
 import BlogDeleteButton from '@/app/components/blog-delete-button'
+import ReactMarkdown from 'react-markdown'
 
 export default async function BlogPost(props: {params: Promise<{slug: string}>}) {
     const params = await props.params;
@@ -26,21 +26,22 @@ export default async function BlogPost(props: {params: Promise<{slug: string}>})
         title: data.title
     }
 
+
+
     return (
         <div className="relative z-100 flex flex-col items-center justify-start mx-8 sm:mx-12">
             <div className={"mt-12 sm:mt-0"}>
-                <TextGenerateEffect
-                words={post.title}
-                className="text-center text-5xl md:text-5xl lg:text-6xl my-4"/>
+                <p className={"text-center text-5xl md:text-5xl lg:text-6xl my-4 text-teal-600 font-mono"}>{post.title}</p>
             </div>
-            <div className={"flex flex-col w-full overflow-y-scroll"}>
+            <div className={"flex flex-col w-full"}>
                 <Suspense>
                     <div className={"flex flex-row w-full justify-between items-center"}>
                         <h2 className={"text-gray-400 text-xl mt-4 sm:mt-8 mb-6 sm:mb-12"}>{post.datePosted}</h2>
                         <BlogDeleteButton post={post}></BlogDeleteButton>
                     </div>
-                    <p className={"text-gray-200 text-lg"}>{post.body.split("\n").map((line, index) => {
-                        return <div key={index}>{line} <br  /> </div>})}</p>
+                    <div className={"text-gray-200 text-lg prose prose-invert max-w-none"}>
+                        <ReactMarkdown>{post.body}</ReactMarkdown>
+                    </div>
                 </Suspense>
             </div>
         </div>
