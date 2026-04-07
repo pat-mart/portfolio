@@ -34,7 +34,7 @@ export default function Home() {
 const items = [
     {
         title: "About me",
-        description: "I'm from Long Island, New York. I am a CS major at UMass Amherst and I'm doing research on graphs with Prof. Hung Le (via Early Research Scholars Program) this semester. When not behind a screen, I enjoy playing guitar and (astro)photography.",
+        description: "I'm from Long Island, New York. I am a CS major at UMass Amherst. This semester, I'm working on a project related to tree decompositions w/ Professor Hung Le. I'm also participating in the Graph Learning and Analytics (GraLNA) REU this summer (NSF award #2609947). When not behind a screen, I enjoy playing electric guitar and (astro)photography.",
         className: " row-span-2 bg-gray-900 flex w-full",
         link: ""
     },

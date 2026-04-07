@@ -3,6 +3,7 @@ import {doc, getDoc} from '@firebase/firestore'
 import {firestoreDb} from '@/app/fb/init'
 import BlogDeleteButton from '@/app/components/blog-delete-button'
 import ReactMarkdown from 'react-markdown'
+import {getAuth} from '@firebase/auth'
 
 export default async function BlogPost(props: {params: Promise<{slug: string}>}) {
     const params = await props.params;
@@ -25,8 +26,6 @@ export default async function BlogPost(props: {params: Promise<{slug: string}>})
         }),
         title: data.title
     }
-
-
 
     return (
         <div className="relative z-100 flex flex-col items-center justify-start mx-8 sm:mx-12">

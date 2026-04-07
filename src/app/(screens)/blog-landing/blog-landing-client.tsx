@@ -68,7 +68,7 @@ export default function BlogLandingClient() {
                             <FancyButton text={"sign in"} onClick={onSignIn}/>
                             <FancyButton text={"sign out"} onClick={onSignOut}/>
                         </div>
-                        {getAuth().currentUser != null ? <p>Already signed in</p> : <></>}
+                        {getAuth().currentUser != null ? <><p className={"font-mono mb-3"}>already signed in</p></> : <></>}
                         {hasError ? (<p className={"text-red-800 font-mono"}>incorrect username or password</p>) : (<></>)}
                         <p className={"text-gray-500 font-mono"}>contact me if you want to make an account</p>
                     </div>

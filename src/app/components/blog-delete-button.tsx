@@ -21,6 +21,17 @@ export default function BlogDeleteButton({post} : {post: any}) {
         }
     }
 
+    try {
+        const auth = getAuth();
+
+        if(!auth.currentUser) {
+            return <></>;
+        }
+    } catch(e) {
+        console.error(e);
+    }
+
+
     return (
         <button onClick={() => onDelete(post.id)}>
             <div className={"w-8 h-8"}>
