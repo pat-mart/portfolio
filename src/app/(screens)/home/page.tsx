@@ -1,4 +1,3 @@
-import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
 import Link from 'next/link'
 import FancyButton from '@/app/components/aceternity/fancy-button'
 import Grid from '@/app/components/grid/grid'
@@ -34,7 +33,7 @@ export default function Home() {
 const items = [
     {
         title: "About me",
-        description: "I'm from Long Island, New York. I am a CS major at UMass Amherst. This semester, I'm working on a project related to tree decompositions w/ Professor Hung Le. I'm also participating in the Graph Learning and Analytics (GraLNA) REU this summer (NSF award #2609947). When not behind a screen, I enjoy playing electric guitar and (astro)photography.",
+        description: "I'm from Long Island, New York. I am a CS major at UMass Amherst. I'm interested in theory research and I am participating in the Graph Learning and Analytics (GraLNA) REU this summer (NSF award #2609947). ",
         className: " row-span-2 bg-gray-900 flex w-full",
         link: ""
     },
