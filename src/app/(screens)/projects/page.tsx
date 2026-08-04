@@ -1,34 +1,46 @@
-import {TextGenerateEffect} from '@/app/components/aceternity/text-generate-effect'
-import Grid from '@/app/components/grid/grid'
+import Link from "next/link";
+import { ArrowIcon } from "@/app/components/site-icons";
+import { projects } from "@/app/site-data";
 
 export default function Projects() {
-    return (
-        <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
-            <p className="text-center text-5xl md:text-5xl lg:text-6xl my-4 font-mono text-teal-600">projects</p>
-            <div className={"mx-12 overflow-hidden"}><Grid items={items}/></div>
-        </div>
-    )
+  return (
+    <article className="page">
+      <header className="page-header-bl">
+        <h1>Projects</h1>
+        <section className={"prose-section"}>
+            <h2>Work in progress!</h2>
+        </section>
+      </header>
+
+      <div className="archive-list">
+        {/*{projects.map((project) => (*/}
+        {/*  <article className="archive-entry" key={project.title}>*/}
+        {/*    <div className="archive-entry__content">*/}
+        {/*      <h2>*/}
+        {/*        <Link href={project.href} target="_blank" rel="noreferrer">*/}
+        {/*          {project.title}*/}
+        {/*        </Link>*/}
+        {/*      </h2>*/}
+        {/*      <p>{project.description}</p>*/}
+        {/*      <ul className="tag-list" aria-label={`${project.title} technologies`}>*/}
+        {/*        {project.technologies.map((technology) => (*/}
+        {/*          <li key={technology}>{technology}</li>*/}
+        {/*        ))}*/}
+        {/*      </ul>*/}
+        {/*    </div>*/}
+        {/*    <Link*/}
+        {/*      className="archive-entry__arrow"*/}
+        {/*      href={project.href}*/}
+        {/*      target="_blank"*/}
+        {/*      rel="noreferrer"*/}
+        {/*      aria-label={`View ${project.title} on GitHub`}*/}
+        {/*    >*/}
+        {/*      <ArrowIcon />*/}
+        {/*    </Link>*/}
+        {/*  </article>*/}
+        {/*))}*/}
+      </div>
+    </article>
+  );
 }
-
-const items = [
-    {
-        title: "TensorDining",
-        description: "A custom deep neural network built with Pytorch. Automated data collection script. Labeling that data, however, was possibly the most boring thing I've ever done in my entire life. Working on making the model more accurate and doing more labeling.",
-        className: "md:col-span-1 row-span-3 bg-gray-900",
-        link: "https://github.com/FRC3950/GymSauna"
-    },
-    {
-        title: "Tuneminal",
-        description: "A chromatic tuner and metronome written in Go.\nUses PortAudio to manage input and output audio buffers, which are generated without the use of an external sound file. I started playing guitar recently, and I hope to use this as a practice aid.",
-        className: "md:col-span-1 row-span-3 bg-gray-900",
-        link: "https://github.com/pat-mart/tune-minal"
-    },
-    {
-        title: "Alpha for Astronomy",
-        description: "A Flutter iOS app I developed for planning astronomy observations. I also developed an open-source Dart library (called alpha_lib) for astronomical calculations as a companion project." ,
-        className: "md:col-span-2 row-span-1 bg-gray-900",
-        link: "https://github.com/pat-mart/alpha_app"
-    }
-]
-
 

@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import {ThemeProvider} from '@/app/theme-provider'
-import {Analytics} from '@vercel/analytics/react'
-import React from 'react'
-
-const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@/app/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import React from "react";
 
 export const metadata: Metadata = {
-  title: "Patrick Martin",
-  description: "My portfolio and blog",
+  title: {
+    default: "Patrick Martin",
+    template: "%s | Patrick Martin",
+  },
+  description:
+    "Patrick Martin is a computer science student interested in theoretical computer science, graph learning, and software development.",
 };
 
 export default function RootLayout({
@@ -19,9 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <Analytics/>
-        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>{children}</ThemeProvider>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

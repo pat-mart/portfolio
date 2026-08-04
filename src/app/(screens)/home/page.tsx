@@ -1,40 +1,41 @@
-import Link from 'next/link'
-import FancyButton from '@/app/components/aceternity/fancy-button'
-import Grid from '@/app/components/grid/grid'
+import Link from "next/link";
+import { ArrowIcon } from "@/app/components/site-icons";
 
 export default function Home() {
-    return (
-        <div className="relative z-100 mx-3 sm:mx-12 mt-8 sm:mt-4 flex flex-col items-center justify-center overflow-hidden">
-            <div
-                className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] mb-10 sm:mb-24 mt-4 flex flex-col items-center justify-center">
-                <p className="text-teal-600 text-left md:tracking-wider mb-8 text-sm md:text-lg lg:text-lg font-bold font-mono">
-                    Patrick Martin
-                </p>
-                <div className={"flex flex-col items-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"}>
-                    <Link href={"/blog-landing"}>
-                        <FancyButton text={"blog"}/>
-                    </Link>
-                    <Link href={"/projects"} prefetch>
-                        <FancyButton text={"projects"}/>
-                    </Link>
-                    <Link href={"https://www.linkedin.com/in/patrick-g-martin/"} target={"_blank"} prefetch>
-                        <FancyButton text={"linkedin"}/>
-                    </Link>
-                    <Link href={"https://github.com/pat-mart"} target={"_blank"} prefetch>
-                        <FancyButton text={"github"}/>
-                    </Link>
-                </div>
-            </div>
-            <Grid items={items}></Grid>
-        </div>
-    )
-}
+  return (
+    <article className="page">
+      <header className="page-header">
+        <p className="eyebrow">About</p>
+        <h1>Hi, I’m Patrick.</h1>
+      </header>
 
-const items = [
-    {
-        title: "About me",
-        description: "I'm from Long Island, New York. I am a CS major at UMass Amherst. I'm interested in theory research and I am participating in the Graph Learning and Analytics (GraLNA) REU this summer (NSF award #2609947). ",
-        className: " row-span-2 bg-gray-900 flex w-full",
-        link: ""
-    },
-];
+      <section className="prose-section">
+        <h2>About me</h2>
+        <p>
+          I’m from Long Island, New York, and I currently study computer science at
+          the University of Massachusetts Amherst.
+        </p>
+        <p>
+          I recently participated in the Graph Learning and Analytics (GraLNA) REU program at Old Dominion University. I am interested in doing more research as an undergrad and eventually going to graduate school.
+        </p>
+      </section>
+
+      <section className="focus-grid" aria-label="Current focus">
+        {/*<div className="focus-card">*/}
+        {/*  <span className="focus-card__number">01</span>*/}
+        {/*  <h3>Research</h3>*/}
+        {/*  <p>Graph learning, algorithms, and theoretical foundations.</p>*/}
+        {/*</div>*/}
+        {/*<div className="focus-card">*/}
+        {/*  <span className="focus-card__number">02</span>*/}
+        {/*  <h3>Engineering</h3>*/}
+        {/*  <p>Small, focused tools built with Go, Python, Flutter, and React.</p>*/}
+        {/*</div>*/}
+      </section>
+
+      <Link className="text-link" href="/projects">
+        Projects <ArrowIcon />
+      </Link>
+    </article>
+  );
+}

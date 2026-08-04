@@ -1,56 +1,40 @@
-import {firestoreDb} from '@/app/fb/init'
-import React from 'react'
-import {collection, getDocsFromServer} from '@firebase/firestore'
-import Link from 'next/link'
-import {BentoGridItem} from '@/app/components/aceternity/bento-grid'
-import BlogLandingClient from '@/app/(screens)/blog-landing/blog-landing-client'
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowIcon } from "@/app/components/site-icons";
+import { formatPostDate, getAllPosts } from "@/lib/posts";
 
-export default async function BlogLanding() {
+export const metadata: Metadata = {
+  title: "Writing",
+  description: "Notes about computer science, projects, music, and things Patrick Martin is learning.",
+};
 
-    async function fetchPreviews() {
+export default function BlogLanding() {
+  const posts = getAllPosts();
 
-        const posts = collection(firestoreDb, 'posts')
-        const postSnapshot = await getDocsFromServer(posts)
+  return (
+    <article className="page">
+      <header className="page-header">
+        <h1>Blog</h1>
+        <p className="page-lede">
+          Occasional miscellaneous writings.
+        </p>
+      </header>
 
-        return postSnapshot.docs.map(doc => {
-            const data = doc.data()
-            return {
-                link: '/blog/' + doc.id,
-                title: data.title,
-                description: data.body.substring(0, 200),
-                className: "col-span-2 row-span-2 w-full bg-gray-900",
-                date: data.datePosted.toDate(),
-                datePostedStr: data.datePosted.toDate().toLocaleString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    hour12: false,
-                }),
-            }
-        })
-    }
-
-    const items = (await fetchPreviews()).sort((a, b) => b.date - a.date)
-    return (
-        <div className="relative z-100 flex flex-col items-center justify-center overflow-hidden">
-            <div className={"mt-12 sm:mt-0"}>
-                <p className="text-center text-5xl md:text-5xl lg:text-6xl my-4 text-teal-600 font-mono">pat thoughts</p>
-            </div>
-            <BlogLandingClient/>
-            <div className={"mx-12 overflow-hidden"}>{items.map((item, i) => (
-                <Link href={item.link} key={i} aria-disabled={item.link === ""}
-                      className={`flex pb-4 w-full ${item.link === "" ? "pointer-events-none" : ""}`}>
-                    <BentoGridItem
-                        key={i}
-                        title={item.title}
-                        description={item.description.trim() + '...'}
-                        date={item.datePostedStr}
-                        className={item.className}
-                    />
-                </Link>
-            ))}</div>
-        </div>
-    )
+      <div className="post-list">
+        {posts.length ? (
+          posts.map((post) => (
+            <article className="post-preview" key={post.slug}>
+              <time dateTime={post.date}>{formatPostDate(post.date)}</time>
+              <h2>
+                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+              </h2>
+              <p>{post.summary}</p>
+            </article>
+          ))
+        ) : (
+          <p className="empty-state">No posts yet. Check back soon.</p>
+        )}
+      </div>
+    </article>
+  );
 }
