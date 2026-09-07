@@ -34,7 +34,6 @@ export default async function BlogPost({ params }: BlogPostProps) {
   return (
     <article className="page article-page">
       <header className="page-header article-header">
-        <p className="eyebrow">Blog</p>
         <h1>{post.title}</h1>
         <div className="article-meta">
           <time dateTime={post.date}>{formatPostDate(post.date)}</time>

@@ -16,6 +16,11 @@ const nextConfig = {
               permanent: true
           },
           {
+              source: '/blog-landing',
+              destination: '/blog',
+              permanent: true
+          },
+          {
               source: '/blog/8MorpoiEJUWucYJO9vYA',
               destination: '/blog/ten-albums-i-like',
               permanent: true

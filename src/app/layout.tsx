@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/app/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import React from "react";
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Patrick Martin",
   },
   description:
-    "Patrick Martin is a computer science student interested in theoretical computer science, graph learning, and software development.",
+    "Patrick Martin is a computer science student interested in theoretical computer science research and software development.",
 };
 
 export default function RootLayout({
@@ -20,13 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </ThemeProvider>
+        {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
