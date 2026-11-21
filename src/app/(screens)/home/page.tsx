@@ -14,7 +14,7 @@ export default function Home() {
         </p>
         <p>
           Last summer, I worked on a semantic communicaions project as a participant in the Graph Learning and Analytics (GraLNA) REU at Old Dominion University (mentored by <a href={"https://sites.google.com/view/lusili/"}>Prof. Lusi Li</a>).
-          I am broadly interested in theoretical computer science and I'm working on a project related to online multiclass learning with <a href={"https://sites.google.com/site/acmonsterqiao/"}>Prof. Mingda Qiao</a> this semester.
+          I am broadly interested in theoretical computer science and I&apos;m working on a project related to online multiclass learning with <a href={"https://sites.google.com/site/acmonsterqiao/"}>Prof. Mingda Qiao</a> this semester.
         </p>
       </section>
 
