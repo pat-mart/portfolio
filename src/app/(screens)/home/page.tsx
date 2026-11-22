@@ -6,8 +6,8 @@ export default function Home() {
     <article className="page">
       <header className="page-header">
         <h1>Patrick Martin</h1>
+        <p className="page-lede">pgmartin at umass dot edu</p>
       </header>
-
       <section className="prose-section">
         <p>
           Hello! My name is Patrick and I’m from Long Island, New York. I&apos;m a CS major at UMass Amherst graduating in Dec. 2027.

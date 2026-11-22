@@ -1,7 +1,4 @@
-export const navigation = [
-  { label: "About", href: "/home" },
-  { label: "Blog", href: "/blog" },
-];
+export const navigation: { label: string; href: string }[] = [];
 
 export const profile = {
   name: "Patrick Martin",
